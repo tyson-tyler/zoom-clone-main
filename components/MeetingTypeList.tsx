@@ -32,7 +32,7 @@ const MeetingTypeList = () => {
   const createMeeting = async () => {
     if (!client || !user) return;
     try {
-      callDetail
+     
       if (!values.dateTime) {
         toast({ title: 'Please select a date and time' });
         return;
@@ -43,6 +43,7 @@ const MeetingTypeList = () => {
       const startsAt =
         values.dateTime.toISOString() || new Date(Date.now()).toISOString();
       const description = values.description || 'Instant Meeting';
+      callDetail
       await call.getOrCreate({
         data: {
           starts_at: startsAt,
@@ -51,6 +52,7 @@ const MeetingTypeList = () => {
           },
         },
       });
+      
       setCallDetail(call);
       if (!values.description) {
         router.push(`/meeting/${call.id}`);
