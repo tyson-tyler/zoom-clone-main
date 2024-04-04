@@ -5,6 +5,7 @@ import Cursor from "@/components/cursor";
 import { ClerkProvider } from "@clerk/nextjs";
 import {shadesOfPurple} from "@clerk/themes";
 import { Toaster } from "@/components/ui/toaster";
+import React from "react";
 
 import '@stream-io/video-react-sdk/dist/css/styles.css';
 
