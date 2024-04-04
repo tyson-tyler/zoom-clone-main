@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 import { sidebarLinks } from '@/constants';
 import { cn } from '@/lib/utils';
-import { SignedIn, UserButton } from '@clerk/nextjs';
+
 
 const Sidebar = () => {
   const pathname = usePathname();
